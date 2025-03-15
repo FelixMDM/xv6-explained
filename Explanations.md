@@ -711,7 +711,7 @@ Therefore: the kernel needs to set this before an iterrupt occurs.
 **SO**: The CPU uses the kernel stack to store our registers.  
 (And after the interrupt handling is over, the CPU needs to pop these guys again. It does this with assembly `iret` command.)
 
-If the interrups occurs during **kernel-mode**, the CPU performs the following:
+If the interrupts occurs during **kernel-mode**, the CPU performs the following:
 
 * push `%eflags`,`%cs` and `%eip` to the **kernel** stack (so we'll have them again after the interrupt).  
 
